@@ -1,0 +1,50 @@
+title: Exploring the Universe # name of the site
+author: Philip Park # name of site's author
+email: philippark271@gmail.com # email of site's author
+url: samuelschwab.com # root address of the site
+baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
+description: > # description of the site (multiple lines allowed)
+  eh.
+
+permalink: /:slug.html
+
+favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)
+# goat_counter: "yoursitename" # put your GoatCounter name if you want to use GoatCounter analytics
+
+# Build settings
+theme: no-style-please
+
+theme_config:
+  appearance: "light" # can be "light", "dark" or "auto"
+  back_home_text: ".." # customize text for homepage link in post layout
+  date_format: "%Y-%m-%d" # customize how date is formatted
+  show_description: false # show blog description in home page
+
+sass:
+  style: :compressed
+
+plugins:
+  - jekyll-compose
+  - jekyll-sitemap
+
+include:
+  - _pages
+
+collections:
+  programming-languages:
+    output: true
+    permalink: /programming-languages/:path/
+  advanced-operating-systems:
+    output: true
+    permalink: /advanced-operating-systems/:path/
+  computer-architecture:
+    output: true
+    permalink: /computer-architecture/:path/ 
+
+jektex:
+  cache_dir: ".jektex-cache"
+  ignore: ["*.xml"]
+  silent: true
+  macros:
+    - ["\\Q", "\\mathbb{Q}"]
+    - ["\\C", "\\mathbb{C}"]

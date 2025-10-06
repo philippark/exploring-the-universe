@@ -1,0 +1,11 @@
+# For documentation on this file, see:
+# https://github.com/riggraz/no-style-please#customize-the-menu
+
+entries:
+  - title: me
+    entries:
+      - title: about
+        url: ../_pages/about
+
+  - title: My Notes
+    post_list: true
